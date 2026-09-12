@@ -5,10 +5,13 @@ class CreateUsers < ActiveRecord::Migration[8.1]
       t.string :last_name, null: false
       t.date :birthday, null: false
       t.string :addresse, null: false
-      t.string :email, null: false
+      t.string :email
       t.integer :role, default: 0
 
       t.timestamps
     end
+
+    add_index :users, [ :first_name, :last_name ], unique: true
+    add_index :users, [ :email ], unique: true
   end
 end

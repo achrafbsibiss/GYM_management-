@@ -5,9 +5,11 @@ one:
   last_name: MyString
   birthday: 2026-09-11
   addresse: MyString
+  email: one@example.com
 
 two:
   first_name: MyString
   last_name: MyString
   birthday: 2026-09-11
   addresse: MyString
+  email: two@example.com
