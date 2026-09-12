@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
-  
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  
+  before_action :set_user, only: [ :show, :edit, :update, :destroy ]
+
   def index
-    @user = User.all 
+    @user = User.all
   end
 
   def edit;end
@@ -16,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_path
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -47,5 +46,4 @@ class UsersController < ApplicationController
                           :birthday
                         ])
   end
-
 end
